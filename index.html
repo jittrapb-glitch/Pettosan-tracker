@@ -141,7 +141,7 @@
       payments.push({ label: `งวด ${i}`, paid, pending });
     }
     const msHtml = milestones.map(m => `<div class="ms ${m.done ? 'done' : m.active ? 'active' : ''}">${m.done ? iconCheck() : m.active ? iconLoader() : iconCircle()} ${m.name}</div>`).join('');
-    const pyHtml = payments.map(p => `<div class="pill ${p.paid ? 'pill-paid' : p.pending ? 'pill-pending' : 'pill-unpaid'}">${p.paid ? iconCheck() : p.pending ? iconLoader() : iconCircle()} ${p.label}${p.paid ? ' — จ่ายแล้ว' : p.pending ? ' — รอการชำระเงิน' : ''}</div>`).join('');
+    const pyHtml = payments.map(p => `<div class="pill ${p.paid ? 'pill-paid' : p.pending ? 'pill-pending' : 'pill-unpaid'}">${p.paid ? iconCheck() : p.pending ? iconLoader() : iconCircle()} ${p.label}${p.paid ? ' — จ่ายแล้ว' : p.pending ? ' — รอการชำระ' : ''}</div>`).join('');
     return `
       <div class="card">
         <div class="card-top">
